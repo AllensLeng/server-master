@@ -9,8 +9,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/example/get", services.ExampleGet)
-	http.HandleFunc("/example/post", services.ExamplePost)
+	http.HandleFunc("/example", services.ExampleHandle)
 
 	logrus.Infof("server start succeeded , listen port :9000")
 	err := http.ListenAndServe(":9000", nil)
